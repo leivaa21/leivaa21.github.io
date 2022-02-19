@@ -47,3 +47,38 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+
+@media screen and (max-width: 1300px){
+  .profilePhoto{
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .Col{
+    max-width: 40%;
+  }
+  .Col:first-child{
+    max-width: 20%;
+  }
+  .Col:last-child{
+    max-width: 40%;
+  }
+  .profilePhoto{
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .profilePhoto{
+    width: 200px;
+  }
+  .Header {
+    flex-direction: column;
+  }
+  .Col {
+    min-width: 100%;
+    padding: 2rem 0;
+  }
+}
