@@ -38,6 +38,7 @@ a {
   display: flex;
   flex: 1;
   flex-direction: column;
+  z-index: 0;
 
   padding: 2rem;
 }
