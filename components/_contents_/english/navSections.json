@@ -1,0 +1,24 @@
+{
+  "sections": [
+    {
+      "title":"Home",
+      "url":"/"
+    },
+    {
+      "title":"About",
+      "url":"/about"
+    },
+    {
+      "title":"Career",
+      "url":"/career"
+    },
+    {
+      "title":"Projects",
+      "url":"/projects"
+    },
+    {
+      "title":"Contact",
+      "url":"/contact"
+    }
+  ]
+}

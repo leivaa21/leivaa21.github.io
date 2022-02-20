@@ -6,6 +6,8 @@ import { CgMenuMotion } from 'react-icons/cg';
 import { VscChromeClose } from 'react-icons/vsc'
 import styles from '../../styles/Navbar.module.css';
 
+import {sections} from '../_contents_/english/navSections.json'
+
 type HiddenNavbarStatus = 'Hidden'|'Shown';
 
 const NavbarHidden: NextPage = () => {
@@ -27,7 +29,7 @@ const NavbarHidden: NextPage = () => {
     const router = useRouter();
   
     useEffect( () => {
-      
+
       const closeOnClickHandler = (e: any) => {
         const navbar = document.querySelector('#NavbarMenu');
         if(!navbar) return;
@@ -37,11 +39,12 @@ const NavbarHidden: NextPage = () => {
       window.addEventListener("click", closeOnClickHandler )
       
       const path = router.pathname;
-      if(path == '/') setSelected(0);
-      if(path == '/about') setSelected(1);
-      if(path == '/career') setSelected(2);
-      if(path == '/projects') setSelected(3);
-      if(path == '/contact') setSelected(4);  
+      let currentSection:number = -1;
+      sections.map((section, index) => {
+        if(section.url == path) currentSection = index;
+      })
+      setSelected(currentSection);
+    
     })
 
     
@@ -50,56 +53,20 @@ const NavbarHidden: NextPage = () => {
 
         <div className={styles.SectionList}>
 
-
-        {(selected === 0) ? 
-          <Link href='/'>
-            <h2 className={styles.selected}>Home</h2>
+        {sections.map((section, index) => {
+          if(selected === index){
+            return(
+              <Link href={section.url}>
+                <h2 className={styles.selected} onClick={toggleStatus}>{section.title}</h2>
+              </Link>
+            )
+          }
+          return (
+            <Link href={section.url}>
+            <h2 onClick={toggleStatus}>{section.title}</h2>
           </Link>
-          :
-          <Link href='/'>
-            <h2>Home</h2>
-          </Link>
-        }
-
-        {(selected === 1) ? 
-          <Link href='/about'>
-            <h2 className={styles.selected}>About</h2>
-          </Link>
-          :
-          <Link href='/about'>
-            <h2>About</h2>
-          </Link>
-        }
-
-        {(selected === 2) ? 
-          <Link href='/career'>
-            <h2 className={styles.selected}>Career</h2>
-          </Link>
-          :
-          <Link href='/career'>
-            <h2>Career</h2>
-          </Link>
-        }
-
-        {(selected === 3) ? 
-          <Link href='/projects'>
-            <h2 className={styles.selected}>Projects</h2>
-          </Link>
-          :
-          <Link href='/projects'>
-            <h2>Projects</h2>
-          </Link>
-        }
-
-        {(selected === 4) ? 
-          <Link href='/contact'>
-            <h2 className={styles.selected}>Contact</h2>
-          </Link>
-          :
-          <Link href='/contact'>
-            <h2>Contact</h2>
-          </Link>
-        }
+          )
+        })}
 
 
           <h3 onClick={toggleStatus}>
