@@ -17,6 +17,7 @@ import { useLangState } from '../lib/LanguageHook'
 //Home
 import homeEnglishContent from '../components/_contents_/english/home.json'
 import homeSpanishContent from '../components/_contents_/spanish/home.json'
+import Footer from '../components/footer'
 
 
 
@@ -44,6 +45,7 @@ const Index: NextPage = () => {
             <Home sections={homeSpanishContent.sections} />
           </>        
       }
+      <Footer/>
     </div>
   )
 }

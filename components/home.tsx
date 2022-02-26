@@ -1,3 +1,4 @@
+import { useThemeState } from "../lib/ThemeHook";
 /* eslint-disable @next/next/no-img-element */
 interface section {
   title: string,
@@ -6,12 +7,13 @@ interface section {
   image:string|null
 }
 const Home = ( content: { sections: section[]; }  ) => {
+  const {theme, setTheme} = useThemeState();
 
   return(
-    <>
+    <div className={theme === 'Dark' ? 'darkTheme' : 'whiteTheme'}>
       {content.sections.map( (section, index) => {
         return (
-          <section className="section" key={`section${index}`}>
+          <section className='section' key={`section${index}`}>
           <h1>{section.title}</h1>
           <h2>{section.subTitle}</h2>
           {section.image === null ?
@@ -29,7 +31,7 @@ const Home = ( content: { sections: section[]; }  ) => {
           </section>
         )
       })}      
-  </>
+  </div>
   )
 }
 

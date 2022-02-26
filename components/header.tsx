@@ -5,14 +5,18 @@ import { SiLinkedin, SiTwitter, SiTelegram } from 'react-icons/si';
 
 import ThemeSwitch from './switchers/themeSwitcher'
 import LangSwitch from "./switchers/langSwitcher";
+import { useThemeState } from '../lib/ThemeHook';
 
 interface HeaderInfo {
   ProfesionalTitle: string,
   Specialization: string,
   SocialMedia: string
 }
-const Header = (content: {info: HeaderInfo}) => {
+const Header = (content: { info: HeaderInfo }) => {
+  const {theme, setTheme} = useThemeState();
+  
   return (
+    <div className={theme === 'Dark' ? 'darkTheme' : 'whiteTheme'}>
     <section className={styles.Header}>
       <div className={styles.Col}>
         <img
@@ -54,7 +58,9 @@ const Header = (content: {info: HeaderInfo}) => {
           </li>
         </ul>
       </div>
-    </section>
+      </section>
+    </div>
+      
   )
 }
 

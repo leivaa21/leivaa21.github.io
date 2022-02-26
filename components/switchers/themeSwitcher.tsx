@@ -19,7 +19,7 @@ const ThemeSwitch: NextPage = () => {
         :
         <input type="checkbox" id="themeSwitch" className={styles.Switcher + ' ' + styles.ThemeSwitch} onChange={toggleTheme} />
       }
-      <label htmlFor="themeSwitch">Theme {theme}</label>
+      <label htmlFor="themeSwitch"></label>
     </div>
   )
 }

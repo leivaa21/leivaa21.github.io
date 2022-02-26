@@ -6,32 +6,33 @@
   width: 100%;
   height: 65px;
   background-color: var(--light-bg-color);
-  
+  color: var(--always-white);
   display: flex;
   flex: 1;
   flex-direction: row;
   align-items: center;
   align-content: center;
-  
+
   overflow: hidden;
 }
 
-.section, .Navbar .selected {
+.section,
+.Navbar .selected {
   font-weight: 500;
   display: inline;
   padding: 3rem;
   border-radius: 500px;
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .section:hover {
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   font-weight: 800;
   font-size: 1.3rem;
 }
 
 .Navbar .selected {
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   font-size: 1.3rem;
 }
 
@@ -44,18 +45,18 @@
   Styling of Hidden navbar & toggle nav button
 */
 
-.ToggleButton{
+.ToggleButton {
   position: fixed;
   top: 5%;
   right: 5%;
-  padding: .2rem 1rem 0;
+  padding: 0.2rem 1rem 0;
   font-size: 2rem;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 
-  transition: transform .125s ease-out;
+  transition: transform 0.125s ease-out;
 }
-.ToggleButton:hover{
+.ToggleButton:hover {
   transform: scale(1.3);
   cursor: pointer;
 }
@@ -66,13 +67,14 @@
   z-index: 3;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  animation: fade-in .2s ease-in-out;
+  animation: fade-in 0.2s ease-in-out;
+  color: var(--always-white);
 }
 
 @keyframes fade-in {
@@ -94,37 +96,38 @@
   flex-direction: column;
 }
 
-.SectionList h2{
+.SectionList h2 {
   margin: 1rem;
-  transition: transform .125s ease-out;
-  padding: .5rem;
+  transition: transform 0.125s ease-out;
+  padding: 0.5rem;
   border-radius: 20px;
 }
 
-.SectionList h2:hover{
+.SectionList h2:hover {
   cursor: pointer;
   transform: scale(1.4);
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .SectionList h3 {
   font-size: 1.2rem;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .SectionList h3:hover {
   cursor: pointer;
   transform: scale(2);
 }
 
-.NavbarMenu .selected{
+.NavbarMenu .selected {
   transform: scale(1.4);
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-
-@supports ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))) {
+@supports (
+  (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))
+) {
   .NavbarMenu {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
   }

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -22,16 +21,7 @@ const NavbarFull = ( content: { sections: any[]; }  ) => {
 
   return(
     <section className={styles.Navbar}>
-      <Link href="/">
-        <a>
-          <img
-            src="images/leivaalogo.png"
-            width='75'
-            className={styles.logoNavbar}
-            alt="Leivaa logo"
-          />
-        </a>
-      </Link>
+
       <ul>
         {content.sections.map((section, index) => {
           if(selected === index){

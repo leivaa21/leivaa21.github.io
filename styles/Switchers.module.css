@@ -35,7 +35,7 @@ input[type="checkbox"].Switcher + label::after {
   transition: 0.125s ease-in-out;
 }
 input[type="checkbox"].ThemeSwitch + label::after {
-  background-color: var(--clean);
+  background-color: var(--always-white);
 }
 input[type="checkbox"].LangSwitch + label::after {
   background-image: url("../public/images/spain_flag.png");
