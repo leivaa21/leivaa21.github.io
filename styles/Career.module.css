@@ -3,7 +3,7 @@
   --border-size: 20px;
   --size-pacman: 40px;
   --ball-size: 75px;
-  border-right: var(--border-size) dotted var(--clean);
+  border-right: var(--border-size) dotted var(--light-bg-color);
 
   display: flex;
   flex: 1;
@@ -13,6 +13,8 @@
   align-items: center;
   align-self: center;
   z-index: 0;
+
+  transition: all var(--transition-timing);
 }
 .stage h1 {
   text-align: center;
@@ -33,6 +35,8 @@
 
   border-radius: var(--ball-size);
   background-color: var(--medium-bg-color);
+
+  transition: all var(--transition-timing);
 }
 .stage::before {
   transform: translate(calc(50% + (var(--border-size) / 2)), -135%);
@@ -48,12 +52,14 @@
 
   width: 0px;
   height: 0px;
-  border-right: var(--size-pacman) solid yellow;
-  border-top: var(--size-pacman) solid yellow;
-  border-left: var(--size-pacman) solid yellow;
+  border-right: var(--size-pacman) solid var(--pacman-color);
+  border-top: var(--size-pacman) solid var(--pacman-color);
+  border-left: var(--size-pacman) solid var(--pacman-color);
   border-bottom: var(--size-pacman) solid transparent;
 
   border-radius: var(--size-pacman);
+
+  transition: all var(--transition-timing);
 }
 
 .arrowFollow::after {

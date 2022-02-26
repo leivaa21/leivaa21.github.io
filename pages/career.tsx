@@ -14,6 +14,12 @@ import navEnglishContent from '../components/_contents_/english/navSections.json
 import navSpanishContent from '../components/_contents_/spanish/navSections.json'
 import { useLangState } from '../lib/LanguageHook'
 
+//Career
+import careerEnglishContent from '../components/_contents_/english/careerSections.json';
+import careerSpanishContent from '../components/_contents_/spanish/careerSections.json';
+
+
+
 import Footer from '../components/footer'
 import CareerSection from '../components/careerSection'
 
@@ -34,14 +40,15 @@ const Index: NextPage = () => {
           <>
             <Header info={headerEnglishContent}/>
             <Navbar sections={navEnglishContent.sections} />  
+            <CareerSection sections={careerEnglishContent.sections} />
           </>
           :
           <>
             <Header info={headerSpanishContent}/>
-            <Navbar sections={navSpanishContent.sections} />  
+            <Navbar sections={navSpanishContent.sections} />
+            <CareerSection sections={careerSpanishContent.sections} />
           </>        
       }
-      <CareerSection />
       <Footer/>
     </div>
   )

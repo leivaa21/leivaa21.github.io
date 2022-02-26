@@ -1,0 +1,22 @@
+{
+  "sections" : [
+    {
+      "title": "Computer Engineering / Software Specialization",
+      "timelapse": "2019 - current",
+      "content":[
+        "In 2019 I started the engineering degree and I'm on third year right now.",
+        "In the degree I have learn about data structures, operating system, object oriented programming among other things.",
+        "The programming languages that I learned in this degree (at least from now) are C, C++, MySQL and Java."
+      ]
+    },
+    {
+      "title": "Aula de Software Libre",
+      "timelapse": "2021 - current",
+      "content":[
+        "I have been asisting to workshops from the 'Aula de Software Libre' since I was in first year of the degree but I didnt joined since 2021 due to all the things that has happened this lasts years...",
+        "The first project I did for the ASL was a node workshop for beginners so the people from the grade would get to know NodeJS and all the javascript/typescript world. (This is better explained on the projects section).",
+        "Since that, I have been participiting in some projects like building the web for SalmorejoTech2022 (wich is still under development)."
+      ]
+    }
+  ]
+}

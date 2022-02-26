@@ -1,0 +1,22 @@
+{
+  "sections" : [
+    {
+      "title": "Ingeniería Informática / Especialidad de Software",
+      "timelapse": "2019 - actualidad",
+      "content":[
+        "En 2019 empecé la carrera de ingeniería y a dia de hoy me encuentro en el tercer año.",
+        "En la ingeniería he aprendido sobre estructuras de datos, sistemas operativos, programación orientada a objetos entre muchas otras cosas.",
+        "Los lenguajes que más he trabajado en los años de carrera (al menos de momento) han sido C, C++, MySQL y Java."
+      ]
+    },
+    {
+      "title": "Aula de Software Libre",
+      "timelapse": "2021 - actualidad",
+      "content":[
+        "Aunque he estado asistiendo a eventos y charlas del aula de software libre practicamente desde que comencé la carrera, no fue hasta el año pasado (2021) que entré como miembro del equipo de coordinación de la misma, todo esto debido a la situación un tanto alborotada de los últimos años",
+        "El primer taller que hice para el aula de software libre fue una workshop sobre node, para dar a conocer la tecnologia y hacer que más gente conociese el potencial de NodeJS y todo lo relacionado con javascript y typescript, ya que en la carrera no se ve nada sobre esto. Más información sobre el workshop en el apartado de proyectos!",
+        "Desde ese momento he estado colaborando con todo el equipo del aula en diferentes proyectos, como por ejemplo crear la web del SalmorejoTech2022 (la cual sigue en desarrollo actualmente)."
+      ]
+    }
+  ]
+}

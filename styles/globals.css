@@ -9,6 +9,7 @@
   --light-bg-color: #777777;
   --clean: #333333;
   --always-white: #e1e1e1;
+  --pacman-color: rgb(200, 200, 50);
 
   background-color: var(--dark-bg-color);
   color: var(--clean);
@@ -20,6 +21,7 @@
   --light-bg-color: #494f53;
   --clean: #dbe9ee;
   --always-white: #dbe9ee;
+  --pacman-color: yellow;
 
   background-color: var(--dark-bg-color);
   color: var(--clean);
