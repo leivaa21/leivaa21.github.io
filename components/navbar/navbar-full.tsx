@@ -7,6 +7,7 @@ import styles from '../../styles/Navbar.module.css';
 const NavbarFull = ( content: { sections: any[]; }  ) => {
 
   const [selected, setSelected] = useState<number>()
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   const router = useRouter();
 
@@ -17,11 +18,21 @@ const NavbarFull = ( content: { sections: any[]; }  ) => {
       if(section.url == path) currentSection = index;
     })
     setSelected(currentSection);
+
+    const handleScroll=() => {
+      const offset=window.scrollY;
+      if(offset > 500 ){
+        setScrolled(true);
+      }
+      else{
+        setScrolled(false);
+      }
+    }
+    window.addEventListener('scroll',handleScroll)
   }, [content.sections, router.pathname, setSelected])
 
-  return(
-    <section className={styles.Navbar}>
-
+  return (
+    <section className={scrolled ? styles.Navbar + ' ' + styles.scrolled : styles.Navbar }>
       <ul>
         {content.sections.map((section, index) => {
           if(selected === index){

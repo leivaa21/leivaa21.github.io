@@ -18,6 +18,13 @@
   transition: all var(--transition-timing);
 }
 
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
 .section,
 .Navbar .selected {
   font-weight: 500;
