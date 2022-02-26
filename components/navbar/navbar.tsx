@@ -5,19 +5,20 @@ import NavbarHidden from "./navbar-hidden";
 
 type NavbarStatus = 'Full'|'Hidden';
 
-const navbar: NextPage = () => {
-  const [status, setStatus] = useState<NavbarStatus>()
+const Navbar: NextPage = () => {
+  const [status, setStatus] = useState<NavbarStatus>('Full')
 
 
-  const handleResize = () => {
-    if(window.innerWidth > 950){
-      setStatus('Full');
-      return;
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth > 950){
+        setStatus('Full');
+        return;
+      }
+      setStatus('Hidden')
     }
-    setStatus('Hidden')
-  }
 
-  useEffect( () => {
     handleResize();
     window.addEventListener('resize', handleResize);
   });
@@ -29,4 +30,4 @@ const navbar: NextPage = () => {
   )
 }
 
-export default navbar;
+export default Navbar;

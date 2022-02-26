@@ -8,7 +8,7 @@ const Index: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Leivaa's Portfolio</title>
+        <title>Leivaa{"'"}s Portfolio</title>
       </Head>
       <Header />
       <Navbar />

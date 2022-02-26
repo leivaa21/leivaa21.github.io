@@ -6,7 +6,7 @@ import { CgMenuMotion } from 'react-icons/cg';
 import { VscChromeClose } from 'react-icons/vsc'
 import styles from '../../styles/Navbar.module.css';
 
-import {sections} from '../_contents_/english/navSections.json'
+import content from '../_contents_/english/navSections.json'
 
 type HiddenNavbarStatus = 'Hidden'|'Shown';
 
@@ -40,12 +40,12 @@ const NavbarHidden: NextPage = () => {
       
       const path = router.pathname;
       let currentSection:number = -1;
-      sections.map((section, index) => {
+      content.sections.map((section, index) => {
         if(section.url == path) currentSection = index;
       })
       setSelected(currentSection);
     
-    })
+    }, [router.pathname, setSelected])
 
     
     return (
@@ -53,18 +53,18 @@ const NavbarHidden: NextPage = () => {
 
         <div className={styles.SectionList}>
 
-        {sections.map((section, index) => {
+        {content.sections.map((section, index) => {
           if(selected === index){
             return(
-              <Link href={section.url}>
+              <Link href={section.url} passHref key={`Link#${index}`}>
                 <h2 className={styles.selected} onClick={toggleStatus}>{section.title}</h2>
               </Link>
             )
           }
           return (
-            <Link href={section.url}>
-            <h2 onClick={toggleStatus}>{section.title}</h2>
-          </Link>
+            <Link href={section.url} passHref key={`Link#${index}`}>
+              <h2 onClick={toggleStatus}>{section.title}</h2>
+            </Link>
           )
         })}
 

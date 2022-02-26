@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from '../../styles/Navbar.module.css';
 
-import {sections} from '../_contents_/english/navSections.json'
+import content from '../_contents_/english/navSections.json'
 
 const NavbarFull: NextPage = () => {
 
@@ -15,11 +16,11 @@ const NavbarFull: NextPage = () => {
   useEffect( () => {
     const path = router.pathname;
     let currentSection:number = -1;
-    sections.map((section, index) => {
+    content.sections.map((section, index) => {
       if(section.url == path) currentSection = index;
     })
     setSelected(currentSection);
-  })
+  }, [router.pathname, setSelected])
 
   return(
     <section className={styles.Navbar}>
@@ -29,21 +30,22 @@ const NavbarFull: NextPage = () => {
             src="images/leivaalogo.png"
             width='75'
             className={styles.logoNavbar}
+            alt="Leivaa logo"
           />
         </a>
       </Link>
       <ul>
-        {sections.map((section, index) => {
+        {content.sections.map((section, index) => {
           if(selected === index){
             return(
-              <Link href={section.url}>
+              <Link href={section.url} passHref key={`Link#${index}`}>
                 <li className={styles.selected}>{section.title}</li>
               </Link>
             )
           }
           return (
-            <Link href={section.url}>
-            <li className={styles.section}>{section.title}</li>
+            <Link href={section.url} passHref key={`Link#${index}`}>
+              <li className={styles.section}>{section.title}</li>
             </Link>
           )
         })}
