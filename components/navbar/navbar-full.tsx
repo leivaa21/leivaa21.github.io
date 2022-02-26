@@ -1,13 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from '../../styles/Navbar.module.css';
 
-import content from '../_contents_/english/navSections.json'
 
-const NavbarFull: NextPage = () => {
+const NavbarFull = ( content: { sections: any[]; }  ) => {
 
   const [selected, setSelected] = useState<number>()
 
@@ -20,7 +18,7 @@ const NavbarFull: NextPage = () => {
       if(section.url == path) currentSection = index;
     })
     setSelected(currentSection);
-  }, [router.pathname, setSelected])
+  }, [content.sections, router.pathname, setSelected])
 
   return(
     <section className={styles.Navbar}>

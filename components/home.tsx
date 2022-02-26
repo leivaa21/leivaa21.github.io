@@ -1,7 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { NextPage } from "next";
-import content from './_contents_/english/home.json'
-const Home: NextPage = () => {
+interface section {
+  title: string,
+  subTitle: string,
+  content: string[]
+  image:string|null
+}
+const Home = ( content: { sections: section[]; }  ) => {
 
   return(
     <>

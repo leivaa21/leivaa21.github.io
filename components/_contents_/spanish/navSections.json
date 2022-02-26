@@ -1,0 +1,24 @@
+{
+  "sections": [
+    {
+      "title":"Principal",
+      "url":"/"
+    },
+    {
+      "title":"Sobre mi",
+      "url":"/about"
+    },
+    {
+      "title":"Recorrido",
+      "url":"/career"
+    },
+    {
+      "title":"Proyectos",
+      "url":"/projects"
+    },
+    {
+      "title":"Contacto",
+      "url":"/contact"
+    }
+  ]
+}

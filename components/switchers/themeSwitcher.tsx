@@ -1,21 +1,24 @@
 import { NextPage } from "next";
-import { useState } from "react";
 import styles from '../../styles/Switchers.module.css';
+import { useThemeState } from "../../lib/ThemeHook";
+
 const ThemeSwitch: NextPage = () => {
-  type ThemeType = 'Light'|'Dark';
-  const [theme, switchTheme] = useState<ThemeType>('Light');
+  const {theme, setTheme} = useThemeState();
 
   const toggleTheme = () => {
     if(theme == 'Light') {
-      switchTheme('Dark');
+      setTheme('Dark');
       return;
     }
-    switchTheme('Light');
+    setTheme('Light');
   }
-
   return (
     <div>
-      <input type="checkbox" id="themeSwitch" className={styles.themeSwitch} onChange={toggleTheme}/>
+      {(theme === 'Dark') ?
+        <input type="checkbox" id="themeSwitch" className={styles.Switcher + ' ' + styles.ThemeSwitch + ' ' + styles.checked} onChange={toggleTheme} />
+        :
+        <input type="checkbox" id="themeSwitch" className={styles.Switcher + ' ' + styles.ThemeSwitch} onChange={toggleTheme} />
+      }
       <label htmlFor="themeSwitch">Theme {theme}</label>
     </div>
   )

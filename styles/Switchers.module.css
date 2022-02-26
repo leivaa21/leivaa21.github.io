@@ -1,8 +1,8 @@
-input[type="checkbox"].themeSwitch {
+input[type="checkbox"].Switcher {
   opacity: 0;
   width: 0;
 }
-input[type="checkbox"].themeSwitch + label {
+input[type="checkbox"].Switcher + label {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ input[type="checkbox"].themeSwitch + label {
   font-size: 1rem;
 }
 
-input[type="checkbox"].themeSwitch + label::before {
+input[type="checkbox"].Switcher + label::before {
   content: "";
   width: 3.3em;
   height: 1.8em;
@@ -19,7 +19,7 @@ input[type="checkbox"].themeSwitch + label::before {
   margin: 0 1em;
 }
 
-input[type="checkbox"].themeSwitch + label::after {
+input[type="checkbox"].Switcher + label::after {
   position: absolute;
   left: calc(margin);
   transform: translateX(-40%) translateY(10%);
@@ -29,15 +29,25 @@ input[type="checkbox"].themeSwitch + label::after {
   border-radius: 1em;
   margin: 0 1em;
 
-  background-color:  var(--clean);
   background-position: center;
   background-size: cover;
 
-
-  transition: .125s ease-in-out;
+  transition: 0.125s ease-in-out;
+}
+input[type="checkbox"].ThemeSwitch + label::after {
+  background-color: var(--clean);
+}
+input[type="checkbox"].LangSwitch + label::after {
+  background-image: url("../public/images/spain_flag.png");
 }
 
-input[type="checkbox"].themeSwitch:checked + label::after {
-  background-color:  var(--dark-bg-color);
+input[type="checkbox"].Switcher.checked + label::after {
   transform: translateX(55%) translateY(10%);
+}
+
+input[type="checkbox"].ThemeSwitch.checked + label::after {
+  background-color: var(--dark-bg-color);
+}
+input[type="checkbox"].LangSwitch.checked + label::after {
+  background-image: url("../public/images/uk_flag.png");
 }

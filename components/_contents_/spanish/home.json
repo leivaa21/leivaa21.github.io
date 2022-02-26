@@ -1,0 +1,35 @@
+{
+  "sections": [
+    {
+      "title": "¡Hola mundo!",
+      "subTitle": "Bienvenidos a mi portfolio web.",
+      "content": [
+        "Estaré subiendo aquí todos mis trabajos y proyectos que haga relacionados con la programación y cosas que vea interesantes!",
+        "Actualmente estoy estudiando en la Universidad de Cordoba (mi ciudad natal), en el grado de Ingenieria Informatica (especialidad de Software). Me podría definir como un entusiasta del aprendizaje, me encanta aprender nuevas tecnologias y aprender sobre cualquier cosa relacionada con la informatica.",
+        "En mi tiempo libre suelo leer, jugar videojuegos (Sobre todo shooters y juegos de simracing) y por supuesto salir con amigos y gente a la que aprecio."
+      ],
+      "image":null
+    },
+    {
+      "title": "Aula de Software Libre",
+      "subTitle": "Ser parte de algo grande tambien te ayuda a crecer más rapido.",
+      "content": [
+        "En 2021 entré al equipo de coordinación del \"Aula de Software\" Libre en mi universidad y desde entonces he estado colaborando con ellos en diferentes proyectos",
+        "Como mencioné antes, me encanta aprender, por lo que ser parte de una organización como esta me ayuda a participar en una gran cantidad de proyectos diferentes y ayudar a gente con sus proyectos (¡y recibir ayuda también!).",
+        "Hacemos ponencias y talleres para los alumnos de nuestra universidad e incluso organizamos un congreso tecnológico anual (SalmorejoTech). Esto nos ayuda a empujarnos aún más para aprender sobre muchos temas de actualidad en el mundo de la informatica que no aprenderiamos mediante la universidad."
+      ],
+      "image":"images/logo-aula-blanco.png"
+    },
+    {
+      "title": "Un poco de mi historia",
+      "subTitle": "Una gran motivación desde bien pequeño.",
+      "content": [
+        "Me han gustado los ordenadores y la informatica desde que tenia unos 12 años. De pequeño veia los ordenadores como la herramienta definitiva para crear nuevas cosas. Como dato curioso, de pequeño siempre decía que queria ser un inventor super importante... Ya siendo adolescente me di cuenta de que la programación y el desarrollo de software sería mi manera de inventar cosas que facilitaran la vida de las personas.",
+        "Desde luego, mi camino aún esta comenzando y me queda muchisimo por aprender, pero por ello trabajo dia a dia para mejorar mis habilidades de programador e ingeniero de software. ¡Esto es solo el comienzo!"
+      ],
+      "image": null
+    }
+  ]
+
+  
+}

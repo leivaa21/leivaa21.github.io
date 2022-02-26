@@ -1,13 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-import { NextPage } from "next";
 import styles from '../styles/Header.module.css';
 import { VscGithub } from 'react-icons/vsc';
 import { SiLinkedin, SiTwitter, SiTelegram } from 'react-icons/si';
 
-import ThemeSwitch from '../components/switchers/themeSwitcher'
-import LangSwitch from "./switchers/lang.switcher";
+import ThemeSwitch from './switchers/themeSwitcher'
+import LangSwitch from "./switchers/langSwitcher";
 
-const Header: NextPage = () => {
+interface HeaderInfo {
+  ProfesionalTitle: string,
+  Specialization: string,
+  SocialMedia: string
+}
+const Header = (content: {info: HeaderInfo}) => {
   return (
     <section className={styles.Header}>
       <div className={styles.Col}>
@@ -22,11 +26,11 @@ const Header: NextPage = () => {
       </div>
       <div className={styles.Col}>
         <h1>Adrián Leiva Rojano</h1>
-        <h3>Software Engineer</h3>
-        <h4>Backend/QA specialized</h4>
+        <h3>{content.info.ProfesionalTitle}</h3>
+        <h4>{content.info.Specialization}</h4>
       </div>
       <div className={styles.Col}>
-        <h3>Social Media</h3>
+        <h3>{content.info.SocialMedia}</h3>
         <ul className={styles.SocialMediaList}>
           <li>
             <a href="https://github.com/leivaa21" target="_blank" rel="noreferrer" >

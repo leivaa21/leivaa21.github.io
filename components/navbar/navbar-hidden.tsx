@@ -6,11 +6,10 @@ import { CgMenuMotion } from 'react-icons/cg';
 import { VscChromeClose } from 'react-icons/vsc'
 import styles from '../../styles/Navbar.module.css';
 
-import content from '../_contents_/english/navSections.json'
 
 type HiddenNavbarStatus = 'Hidden'|'Shown';
 
-const NavbarHidden: NextPage = () => {
+const NavbarHidden = ( content: { sections: any[]; }  ) => {
   
   const [status, setStatus] = useState<HiddenNavbarStatus>('Hidden');
 
