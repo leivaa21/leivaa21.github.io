@@ -54,7 +54,7 @@ const Footer = (/**content: {info: FooterInfo}*/) => {
           <div className={styles.sRow}>
           </div>
           <div className={styles.sRow}>
-            <a href="mailto:adrianleivarojano21@gmail.es" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:adrianleivarojano21@gmail.com" target="_blank" rel="noopener noreferrer">
               <h4><MdOutlineMailOutline/>adrianleivarojano21@gmail.com</h4>
             </a>
           </div>
