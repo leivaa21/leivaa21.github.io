@@ -1,0 +1,43 @@
+input[type="checkbox"].themeSwitch {
+  opacity: 0;
+  width: 0;
+}
+input[type="checkbox"].themeSwitch + label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+
+input[type="checkbox"].themeSwitch + label::before {
+  content: "";
+  width: 3.3em;
+  height: 1.8em;
+  background-color: var(--light-bg-color);
+  border-radius: 1em;
+  margin: 0 1em;
+}
+
+input[type="checkbox"].themeSwitch + label::after {
+  position: absolute;
+  left: calc(margin);
+  transform: translateX(-40%) translateY(10%);
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1em;
+  margin: 0 1em;
+
+  background-color:  var(--clean);
+  background-position: center;
+  background-size: cover;
+
+
+  transition: .125s ease-in-out;
+}
+
+input[type="checkbox"].themeSwitch:checked + label::after {
+  background-color:  var(--dark-bg-color);
+  transform: translateX(55%) translateY(10%);
+}
