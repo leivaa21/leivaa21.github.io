@@ -25,6 +25,10 @@
   color: var(--clean);
 }
 /*******/
+
+:root {
+  --transition-timing: 0.3s;
+}
 html,
 body {
   padding: 0;
@@ -52,6 +56,7 @@ a {
   z-index: 0;
 
   padding: 2rem;
+  transition: all var(--transition-timing);
 }
 
 .section img {

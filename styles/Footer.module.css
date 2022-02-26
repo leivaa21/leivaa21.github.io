@@ -9,6 +9,7 @@
   min-height: 20vh;
 
   background-color: var(--medium-bg-color);
+  transition: all var(--transition-timing);
 }
 .logo {
   width: 150px;

@@ -35,7 +35,7 @@ input[type="checkbox"].Switcher + label::after {
   transition: 0.125s ease-in-out;
 }
 input[type="checkbox"].ThemeSwitch + label::after {
-  background-color: var(--always-white);
+  background-image: url("../public/images/sun.jpg");
 }
 input[type="checkbox"].LangSwitch + label::after {
   background-image: url("../public/images/spain_flag.png");
@@ -46,7 +46,7 @@ input[type="checkbox"].Switcher.checked + label::after {
 }
 
 input[type="checkbox"].ThemeSwitch.checked + label::after {
-  background-color: var(--dark-bg-color);
+  background-image: url("../public/images/moon.jpg");
 }
 input[type="checkbox"].LangSwitch.checked + label::after {
   background-image: url("../public/images/uk_flag.png");
