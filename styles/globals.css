@@ -115,6 +115,13 @@ a {
   margin: 0rem 2rem;
 }
 
+.centered {
+  text-align: center !important;
+}
+.centered h2 {
+  text-align: center !important;
+}
+
 @media screen and (max-width: 800px) {
   .section h2:nth-child(even) {
     text-align: center;
