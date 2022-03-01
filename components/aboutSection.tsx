@@ -77,8 +77,15 @@ const AboutSection = () => {
           </div>
       </section>
       <section className="section centered">
-          <h1>Skills</h1>
-          <h2>Software Engineer Skills</h2>
+        <h1>Skills</h1>
+        <h2>Software Engineer Skills</h2>
+        <div className={styles.roundGraphGrid}>
+          <div className={styles.roundGraph + ' ' + styles.roundGraph80}>Architecture</div>
+          <div className={styles.roundGraph + ' ' + styles.roundGraph90}>Clean Code</div>
+          <div className={styles.roundGraph + ' ' + styles.roundGraph70}>Backend</div>
+          <div className={styles.roundGraph + ' ' + styles.roundGraph50}>Frontend</div>
+          <div className={styles.roundGraph + ' ' + styles.roundGraph70}>QA</div>
+        </div>
       </section>
     </div>
   )

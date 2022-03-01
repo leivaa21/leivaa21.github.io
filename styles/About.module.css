@@ -107,7 +107,7 @@
   height: 10em;
   border: 20px;
   padding: 1em;
-  background-color: var(--always-white);
+  background-color: rgba(230, 230, 230, 0.4);
   transition: all 0.2s ease-out;
 }
 
@@ -115,17 +115,84 @@
   transform: scale(1.2);
 }
 
+.roundGraphGrid {
+  padding: 4rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 5em;
+  align-items: center;
+}
+
+.roundGraph {
+  width: 200px;
+  aspect-ratio: 1;
+  display: inline-grid;
+  place-content: center;
+  margin: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.roundGraph::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - 0.5em),
+    #000 calc(100% - 0.5em)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - 0.5em),
+    #000 calc(100% - 0.5em)
+  );
+}
+.roundGraph90::before {
+  background: conic-gradient(var(--clean) calc(90 * 1%), #0000 0);
+}
+.roundGraph80::before {
+  background: conic-gradient(var(--clean) calc(80 * 1%), #0000 0);
+}
+.roundGraph70::before {
+  background: conic-gradient(var(--clean) calc(70 * 1%), #0000 0);
+}
+.roundGraph60::before {
+  background: conic-gradient(var(--clean) calc(60 * 1%), #0000 0);
+}
+.roundGraph50::before {
+  background: conic-gradient(var(--clean) calc(50 * 1%), #0000 0);
+}
+/*conic-gradient(var(--always-white) calc(90 * 1%), #0000 0); */
+
+@media screen and (max-width: 1600px) {
+  .roundGraphGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 15px;
+  }
+  .roundGraphGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 700px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: 15px;
+  }
+  .roundGraphGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
 }
