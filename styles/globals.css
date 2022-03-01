@@ -57,7 +57,7 @@ a {
   flex-direction: column;
   z-index: 0;
 
-  padding: 2rem;
+  padding: 2rem 5rem;
   transition: all var(--transition-timing);
 }
 
@@ -123,6 +123,9 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  .section {
+    padding: 1rem 1rem 1rem 0rem;
+  }
   .section h2:nth-child(even) {
     text-align: center;
   }

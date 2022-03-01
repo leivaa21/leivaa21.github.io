@@ -1,0 +1,15 @@
+{
+  "title": "Sobre mi",
+  "subtitle": "Especializado en Typescript",
+  "paragraphs": [
+    "Como menciono en la seccion de \"Recorrido\", en la universidad no hemos aprendido nada de Javascript ni Typescript (más hallá de crear algún script basico para web), pero por algunas razones siempre digo que son los lenguajes (Js y Ts) en los que estoy mas cómodo, en especial Typescript",
+    "Esto se debe a que desde 2019 decidí que necesitaba empezar a aprender de una forma mucho más autodidacta, y empecé a inversitar sobre otros lenguajes y estilos de programación hasta que descubri NodeJS. En ese momento empecé a aprender bastante de Javascript y en 2020/2021 realizé un curso de DDD + Arquitectura Hexagonal en mi universidad (Gracias al Aula de Software Libre y especial mención a @sgomez por ser un gran profesor y mejor persona ;) ) en ese curso tuvimos una parte del desarrollo enfocada en typescript y realmente me pareció un gran lenguaje.",
+    "Por lo que me especializé en Typescript (Aún que actualmente estoy aprendiendo otros lenguajes como python y me gustaria aprender PHP)."
+  ],
+  "CodeSkillsTitle":"Habilidades de desarrollo",
+  "CodeSkillsSubtitle":"Top de lenguajes",
+  "FrameworksTitle":"Con experiencia en",
+  "FrameworksSubtitle":"Mayormente frameworks de typescript",
+  "SkillsTitle":"Habilidades",
+  "SkillsSubtitle":"Enfocado en la calidad del codigo"
+}
