@@ -1,0 +1,198 @@
+.ranking {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.ranking h2 {
+  text-align: center !important;
+}
+
+.ranking ul {
+  list-style: none;
+}
+.ranking li {
+  display: block;
+  width: 80vw;
+  height: 2.5em;
+  border-radius: 20px;
+  background-color: var(--light-bg-color);
+  color: var(--always-white);
+  text-align: center;
+  line-height: 2.5em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.ranking li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0vw;
+  transform: translate(0.25em, 0.25em);
+  height: 2em;
+  background-color: var(--always-white);
+  opacity: 0.3;
+  border-radius: 20px;
+}
+
+.ranking li.eighty::before {
+  animation: progressBar80 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes progressBar80 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(80% / 100 * 80);
+  }
+}
+.ranking li.seventy::before {
+  animation: progressBar70 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes progressBar70 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(80% / 100 * 70);
+  }
+}
+
+.ranking li.sixty::before {
+  animation: progressBar60 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes progressBar60 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(80% / 100 * 60);
+  }
+}
+
+.ranking li.fifty::before {
+  animation: progressBar50 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes progressBar50 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(80% / 100 * 50);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 15px;
+  align-items: center;
+}
+
+.FrLogo img {
+  filter: none !important;
+  float: none !important;
+  width: 10em;
+  height: 10em;
+  border: 20px;
+  padding: 1em;
+  background-color: rgba(230, 230, 230, 0.4);
+  transition: all 0.2s ease-out;
+}
+
+.FrLogo img:hover {
+  transform: scale(1.2);
+}
+
+.roundGraphGrid {
+  padding: 4rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 5em;
+  align-items: center;
+}
+
+.roundGraph {
+  width: 200px;
+  aspect-ratio: 1;
+  display: inline-grid;
+  place-content: center;
+  margin: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.roundGraph::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - 0.5em),
+    #000 calc(100% - 0.5em)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - 0.5em),
+    #000 calc(100% - 0.5em)
+  );
+}
+.roundGraph90::before {
+  background: conic-gradient(var(--clean) calc(90 * 1%), #0000 0);
+}
+.roundGraph80::before {
+  background: conic-gradient(var(--clean) calc(80 * 1%), #0000 0);
+}
+.roundGraph70::before {
+  background: conic-gradient(var(--clean) calc(70 * 1%), #0000 0);
+}
+.roundGraph60::before {
+  background: conic-gradient(var(--clean) calc(60 * 1%), #0000 0);
+}
+.roundGraph50::before {
+  background: conic-gradient(var(--clean) calc(50 * 1%), #0000 0);
+}
+/*conic-gradient(var(--always-white) calc(90 * 1%), #0000 0); */
+
+@media screen and (max-width: 1600px) {
+  .roundGraphGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .roundGraphGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .roundGraphGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
