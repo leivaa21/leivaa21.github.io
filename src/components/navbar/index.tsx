@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useWindowSize } from '../../hooks/useWindowSize';
 import { useScrollHandler } from '../../hooks/useScrollHandler';
+
+import { HiMenu } from 'react-icons/hi';
+
 import styles from './navbar.module.css';
+import { useState } from 'react';
 
 const Navbar = () => {
 
@@ -26,19 +30,42 @@ const Navbar = () => {
   ]
 
   const scrolled = useScrollHandler();
-  let navbarClasses = styles.base + ' ' 
+  const {width} = useWindowSize();
+
+  const lowWidth = width < 900;
+
+  const [showNavbar, setShowNavbar] = useState<boolean>(false);
+  const toggleShown = () => {
+    setShowNavbar(!showNavbar);
+  }
+
+  const formated_sections = <ul>
+      {contents.map(content => (
+        <Link key={`nav-${content.title}`} href={content.href}>
+          <li className={router.route == content.href ? styles.active: ""}>
+              <span><p>{content.icon}{content.title}</p></span>
+          </li>
+        </Link>
+      ))}
+      </ul>
+
+  const compactNavbar: JSX.Element = showNavbar ? (
+    <div className={styles.compact_background} onClick={toggleShown}>
+     {formated_sections} 
+    </div>
+  ): <button onClick={toggleShown}><HiMenu /></button>;
+
+  if (lowWidth) {
+    return (
+      <section id="compact-navbar" className={styles.base_compact}>
+        {compactNavbar}
+      </section>
+    )
+  }
 
   return (
   <section id="navbar" className={`${styles.base} ${scrolled? styles.scrolled : ''}`}>
-    <ul>
-    {contents.map(content => (
-      <li key={`nav-${content.title}`} className={router.route == content.href ? styles.active: ""}>
-        <Link href={content.href}>
-          <span><p>{content.icon}{content.title}</p></span>
-        </Link>
-      </li>
-    ))}
-    </ul>
+    {formated_sections} 
   </section>
   )
 }
