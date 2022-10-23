@@ -28,14 +28,16 @@
 .me {
   display: inline-flex;
   margin: auto;
-  background-color: var(--bg-mask);
-  color: var(--primary);
+/* From https://css.glass */
+  background: rgba(1, 254, 255, 0.6);
   border-radius: 75px;
-  padding: 0 1.25em 0 5em;
-
-  -webkit-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
-  box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(1, 254, 255, 0.3);
+  
+  color: var(--text);
+  padding: 0 1.25em 0 2.5em;
 }
 .me .info {
   margin: auto;
@@ -68,7 +70,7 @@
 }
 
 .rrss svg {
-  fill: var(--primary);
+  fill: var(--text);
   font-size: 25px;
   transition: all .25s ease-in-out;
 }
@@ -81,12 +83,9 @@
   max-width: 200px;
   max-height: 200px;
   margin: 25px;
-  border-radius: 125px;
+  border-radius: 25px;
   
-  background: rgb(37, 42, 52);
-  background: -moz-radial-gradient(circle, rgba(37, 42, 52, 1) 0%, rgba(25, 28, 35, 0.75) 40%, rgba(0, 0, 0, 0) 65%);
-  background: -webkit-radial-gradient(circle, rgba(37, 42, 52, 1) 0%, rgba(25, 28, 35, 0.75) 40%, rgba(0, 0, 0, 0) 65%);
-  background: radial-gradient(circle, rgba(37, 42, 52, 1) 0%, rgba(25, 28, 35, 0.75) 40%, rgba(0, 0, 0, 0) 65%);
+  background: var(--bg-mask);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#252a34", endColorstr="#000000", GradientType=1);
 }
 .me img {
@@ -148,13 +147,13 @@
   .me .img_wrapper {
     width: 100px;
     height: 100px;
-    margin: 15px;
-    border-radius: 125px;
+    margin: 12.5px;
+    border-radius: 12.5px;
   }
   .me {
     margin: auto;
     border-radius: 50px;
-    padding: 0 1em 0 3em;
+    padding: 0 1em 0 1.5em;
 
     -webkit-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
     -moz-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
