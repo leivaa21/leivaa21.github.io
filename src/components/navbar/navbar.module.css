@@ -11,8 +11,12 @@
   flex: 1;
 
   align-items: center;
-  background-color: var(--secondary-mask);
 }
+
+.base.scrolled {
+  background-color: var(--secondary);
+}
+
 
 .base ul {
   display: inline-flex;
@@ -37,7 +41,11 @@
 
 .base li:hover,
 .base li.active {
-  background-color: var(--bg-mask);
   cursor: pointer;
   font-weight: bolder;
+}
+
+.base.scrolled li:hover,
+.base.scrolled li.active {
+  background-color: var(--bg-mask);
 }
