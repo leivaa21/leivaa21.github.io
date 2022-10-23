@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { BsGithub, BsLinkedin, BsMailbox2, BsTwitch, BsTwitter } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsMailbox2, BsTwitter } from 'react-icons/bs';
 import styles from './hero.module.css';
 
 const Hero = () => {
@@ -13,22 +13,17 @@ const Hero = () => {
     {
       name: 'Linkedin',
       icon: <BsLinkedin/>,
-      href: 'https://twitter.com/leivaa21_'
+      href: 'https://www.linkedin.com/in/adri%C3%A1n-leiva-rojano-02763b216/'
     },
     {
       name: 'Github',
       icon: <BsGithub/>,
-      href: 'https://twitter.com/leivaa21_'
-    },
-    {
-      name: 'Twitch',
-      icon: <BsTwitch/>,
-      href: 'https://twitter.com/leivaa21_'
+      href: 'https://github.com/leivaa21'
     },
     {
       name: 'Mail',
       icon: <BsMailbox2/>,
-      href: 'https://twitter.com/leivaa21_'
+      href: 'mailto:adrianleiva212@gmail.com'
     },
   ]
 
