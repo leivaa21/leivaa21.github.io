@@ -6,7 +6,7 @@ import { useScrollHandler } from '../../hooks/useScrollHandler';
 import { HiMenu } from 'react-icons/hi';
 
 import styles from './navbar.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
 
@@ -30,9 +30,13 @@ const Navbar = () => {
   ]
 
   const scrolled = useScrollHandler();
-  const {width} = useWindowSize();
 
-  const lowWidth = width < 900;
+  const [isLowWidth, setLowWitdhCheck] = useState<boolean>(false);
+  const {width} = useWindowSize();
+  
+  useEffect(() => {
+    setLowWitdhCheck(width < 900);
+  }, [width])
 
   const [showNavbar, setShowNavbar] = useState<boolean>(false);
   const toggleShown = () => {
@@ -55,7 +59,7 @@ const Navbar = () => {
     </div>
   ): <button onClick={toggleShown}><HiMenu /></button>;
 
-  if (lowWidth) {
+  if (isLowWidth) {
     return (
       <section id="compact-navbar" className={styles.base_compact}>
         {compactNavbar}
