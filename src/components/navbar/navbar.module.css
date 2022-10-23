@@ -1,0 +1,39 @@
+.base {
+  font-size: 18px;
+  height: 3.5em;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+
+  align-items: center;
+  background-color: var(--secondary);
+}
+
+.base ul {
+  display: inline-flex;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.base span {
+  width: 8em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.base p::selection {
+  background-color: var(--primary);
+  color: var(--bg);
+}
+
+.base li:hover,
+.base li.active {
+  background-color: var(--bg-mask);
+  cursor: pointer;
+  font-weight: bolder;
+}

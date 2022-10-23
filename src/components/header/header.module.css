@@ -1,0 +1,93 @@
+.base {
+  --margins: 50px;
+
+  width: 100vw;
+  min-height: 300px;
+  height: min-content;
+
+  display: inline-flex;
+
+}
+
+.me {
+  display: inline-flex;
+  margin: auto;
+  background-color: var(--primary);
+  color: var(--bg);
+  border-radius: 75px;
+  padding: 0 1.25em 0 5em;
+
+  -webkit-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
+  box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
+}
+.me .info {
+  margin: auto;
+}
+
+.info h1::selection,
+.info h2::selection {
+  background: var(--secondary);
+}
+
+.rrss {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.rrss ul {
+  list-style: none;
+  display: inline-flex;
+  margin: auto;
+  padding: 0;
+}
+
+.rrss li {
+  margin: .25em;
+}
+
+.rrss svg {
+  fill: var(--bg);
+  font-size: 25px;
+  transition: all .25s ease-in-out;
+}
+.rrss svg:hover {
+  transform: scale(1.25);
+  fill: var(--secondary)
+}
+
+.me .img_wrapper {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 25px;
+  border-radius: 125px;
+  
+  background: rgb(37, 42, 52);
+  background: -moz-radial-gradient(circle, rgba(37, 42, 52, 1) 0%, rgba(25, 28, 35, 0.75) 40%, rgba(0, 0, 0, 0) 65%);
+  background: -webkit-radial-gradient(circle, rgba(37, 42, 52, 1) 0%, rgba(25, 28, 35, 0.75) 40%, rgba(0, 0, 0, 0) 65%);
+  background: radial-gradient(circle, rgba(37, 42, 52, 1) 0%, rgba(25, 28, 35, 0.75) 40%, rgba(0, 0, 0, 0) 65%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#252a34", endColorstr="#000000", GradientType=1);
+}
+.me img {
+  position: relative;
+  width: 100%;
+}
+.me img::selection {
+  background: none;
+}
+
+.title {
+  margin: auto;
+  text-align: center;
+}
+
+.title h1::selection,
+.title h3::selection,
+.title h1.marked {
+  color: var(--bg);
+  background: var(--primary);
+}
