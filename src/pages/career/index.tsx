@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../../components/header'
+import Header from '../../components/hero'
 import Navbar from '../../components/navbar'
 
 const Career: NextPage = () => {

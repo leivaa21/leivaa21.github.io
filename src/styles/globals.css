@@ -1,8 +1,9 @@
 * {
   --bg: #252A34;
-  --bg-mask: #252A3433;
+  --bg-mask: #252a34b9;
   --primary: #01FEFF;
   --secondary: #FE46EB;
+  --secondary-mask: #FE46EB22;
   --text: #EAEAEA;
 }
 
@@ -26,9 +27,3 @@ a {
   box-sizing: border-box;
 }
 
-
-.col-3 {
-  display: flex;
-  flex: 1;
-  max-width: 33.3vw;
-}

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Info from '../components/files/info'
-import Header from '../components/header'
+import Hero from '../components/hero'
 import Navbar from '../components/navbar'
 import TerminalContainer from '../components/terminal-container'
 
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Header />
+        <Hero />
         <Navbar />
         <section id="Home">
           <div>

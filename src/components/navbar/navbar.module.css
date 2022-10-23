@@ -1,4 +1,8 @@
 .base {
+
+  position: fixed;
+  top: 0;
+
   font-size: 18px;
   height: 3.5em;
   width: 100vw;
@@ -7,7 +11,7 @@
   flex: 1;
 
   align-items: center;
-  background-color: var(--secondary);
+  background-color: var(--secondary-mask);
 }
 
 .base ul {

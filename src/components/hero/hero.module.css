@@ -1,19 +1,35 @@
 .base {
-  --margins: 50px;
-
+  --margins: 5vw;
   width: 100vw;
-  min-height: 300px;
-  height: min-content;
+  height: 100vh;
 
-  display: inline-flex;
 
+  background-image: url('/header-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  transition: all .2s ease-in;
 }
-
+.hero {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-mask);
+}
+.col_wrapper {
+  width: calc(100vw - 2 * var(--margins));
+  margin: 0 var(--margins);
+  height: 100%;
+  display: inline-flex;
+}
+.col {
+  display: flex;
+  flex: 1;
+  max-width: calc(100vw / 2 - var(--margins));
+}
 .me {
   display: inline-flex;
   margin: auto;
-  background-color: var(--primary);
-  color: var(--bg);
+  background-color: var(--bg-mask);
+  color: var(--primary);
   border-radius: 75px;
   padding: 0 1.25em 0 5em;
 
@@ -28,6 +44,7 @@
 .info h1::selection,
 .info h2::selection {
   background: var(--secondary);
+  color: var(--bg);
 }
 
 .rrss {
@@ -51,7 +68,7 @@
 }
 
 .rrss svg {
-  fill: var(--bg);
+  fill: var(--primary);
   font-size: 25px;
   transition: all .25s ease-in-out;
 }
@@ -80,14 +97,67 @@
   background: none;
 }
 
-.title {
+.content {
   margin: auto;
-  text-align: center;
 }
 
-.title h1::selection,
-.title h3::selection,
-.title h1.marked {
+.content .title {
+  font-size: 2.5em;
+}
+
+.content h1::selection,
+.content h3::selection,
+.content .title span,
+.content .title span::selection {
   color: var(--bg);
   background: var(--primary);
+}
+
+
+@media (max-width: 1400px) {
+  .base {
+    font-size: 15px
+  }
+}
+@media (max-width: 1300px) {
+  .base {
+    font-size: 12px
+  }
+}
+@media (max-width: 1100px) {
+  .base {
+    font-size: 10px
+  }
+}
+@media (max-width: 900px) {
+  .col_wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  .col {
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .base {
+    font-size: 11px;
+  }
+  .me .img_wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    border-radius: 125px;
+  }
+  .me {
+    margin: auto;
+    border-radius: 50px;
+    padding: 0 1em 0 3em;
+
+    -webkit-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
+    box-shadow: inset 0px 0px 44px -6px rgba(0, 0, 0, 0.42);
+  }
 }
