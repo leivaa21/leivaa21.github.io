@@ -5,18 +5,21 @@ import styles from './terminal.module.css'
 
 type props = {
   command: string,
-  file: string,
+  param?: string,
+  width?: string,
+  height?: string,
+  margin?: string,
   children: JSX.Element,
 }
 
-const TerminalContainer = ({command, file, children}: props) => {
+const TerminalContainer = ({command, param, children, width, height, margin}: props) => {
 
   const router = useRouter();
 
   const terminalVariables = {
-    ['--width' as any]: "500px",
-    ['--height' as any]: "",
-    ['--margin' as any]: "25px",
+    ['--width' as any]: width,
+    ['--height' as any]: height,
+    ['--margin' as any]: margin,
     ['--toolbar-background' as any]: "#31363B",
     ['--background' as any]: '#0A0E1488',
     ['--font-white' as any]: '#C7C7C7',
@@ -61,7 +64,7 @@ const TerminalContainer = ({command, file, children}: props) => {
             <span className={styles.terminal_time}>{prompt.time}</span>
             <span className={styles.terminal_user}>{texts.user}</span>
             <span className={styles.terminal_bling}>{prompt.mark}</span>
-            <p className={styles.terminal_command_text}><span>{command}</span> {file}</p>
+            <p className={styles.terminal_command_text}><span>{command}</span> {param}</p>
           </div>
           <div className={styles.output}>
             {children}

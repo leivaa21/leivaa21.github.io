@@ -58,7 +58,6 @@
 }
 
 .btn:hover {
-  cursor: pointer;
   background: var(--font-white);
   color: var(--toolbar-background);
 }
@@ -97,7 +96,10 @@
   flex-direction: column;
   flex: 1;
   padding: 0.5em 0 1.5em 0;
+}
 
+.terminal_body:hover {
+  cursor:text;
 }
 
 .terminal_command {

@@ -17,10 +17,7 @@ const Home: NextPage = () => {
         <Hero />
         <Navbar />
         <section id="Home">
-          <div>
-            <h1>Hello World!</h1>
-          </div>
-          <TerminalContainer command='mdcat' file='info.md'>
+          <TerminalContainer command='mdcat' param='info.md' width='80vw' height='min-content' margin='10vh 10vw'>
             <Info/>
           </TerminalContainer>
         </section>
