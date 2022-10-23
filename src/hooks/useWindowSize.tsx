@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 type windowSize = {
   width: number;
@@ -16,7 +16,7 @@ export function useWindowSize() {
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", changeWindowSize);
 
     return () => {
