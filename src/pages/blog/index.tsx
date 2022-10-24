@@ -12,8 +12,8 @@ const Blog: NextPage = () => {
       </Head>
 
       <main>
-        <Header />
         <Navbar />
+        <Header />
         <section id="Blog">
         
         </section>
