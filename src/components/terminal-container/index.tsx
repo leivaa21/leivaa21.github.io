@@ -38,9 +38,13 @@ const TerminalContainer = ({command, param, children, width, height, margin}: pr
   let hour = new Date().getHours();
   if (hour > 12) hour -= 12;
   const minutes = new Date().getMinutes();
-
+  let parsed_minutes:string = `${minutes}`;
+  
+  if (minutes < 10) {
+    parsed_minutes = `0${minutes}`; 
+  }
   const prompt = {
-    time: `[ ${hour}:${minutes} ] `,
+    time: `[ ${hour}:${parsed_minutes} ] `,
     mark: ` > `
   }
 
