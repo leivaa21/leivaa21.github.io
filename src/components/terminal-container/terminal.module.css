@@ -25,6 +25,14 @@
   background: var(--toolbar-background);
 }
 
+.terminal_toolbar p:hover {
+  cursor:default;
+}
+
+.terminal_toolbar p::selection {
+  background: none;
+}
+
 .butt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,23 +130,44 @@
 .terminal_time {
   color: var(--font-cyan);
 }
+.terminal_time::selection {
+  color: var(--bg);
+  background: var(--font-cyan);
+}
 
 .terminal_user {
   color: var(--font-white);
   font-weight: bold;
 }
+.terminal_user::selection {
+  color: var(--bg);
+  background: var(--font-white);
+}
 
 .terminal_bling {
   color: var(--font-magenta);
+}
+.terminal_bling::selection {
+  color: var(--bg);
+  background: var(--font-magenta);
 }
 .terminal_command_text {
   margin: 0;
   padding: 0;
 }
+.terminal_command_text::selection {
+  color: var(--bg);
+  background: var(--font-white);
+}
 
 .terminal_command_text span{
   color: var(--font-green);
 }
+.terminal_command_text span::selection {
+  color: var(--bg);
+  background: var(--font-green);
+}
+
 .terminal_cursor {
   height: 1.2em;
   width: 1px;
@@ -150,8 +179,20 @@
   font-size: 2em;
 }
 .output h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
+.output p {
+  font-size: 1.3em
+}
+
+.output h1::selection,
+.output h2::selection,
+.output p::selection,
+.output b::selection {
+  color: var(--bg);
+  background: var(--font-white);
+}
+
 
 @-webkit-keyframes curbl {
 

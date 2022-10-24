@@ -40,8 +40,8 @@ const TerminalContainer = ({command, param, children, width, height, margin}: pr
   const minutes = new Date().getMinutes();
 
   const prompt = {
-    time: `[ ${hour}:${minutes} ]`,
-    mark: `>`
+    time: `[ ${hour}:${minutes} ] `,
+    mark: ` > `
   }
 
 
@@ -62,7 +62,7 @@ const TerminalContainer = ({command, param, children, width, height, margin}: pr
         <div className={styles.terminal_command}>
           <div className={styles.terminal_prompt}>
             <span className={styles.terminal_time}>{prompt.time}</span>
-            <span className={styles.terminal_user}>{texts.user}</span>
+            <span className={styles.terminal_user}>{texts.user + ' '}</span>
             <span className={styles.terminal_bling}>{prompt.mark}</span>
             <p className={styles.terminal_command_text}><span>{command}</span> {param}</p>
           </div>
@@ -71,7 +71,7 @@ const TerminalContainer = ({command, param, children, width, height, margin}: pr
           </div>
           <div className={styles.terminal_prompt}>
             <span className={styles.terminal_time}>{prompt.time}</span>
-            <span className={styles.terminal_user}>{texts.user}</span>
+            <span className={styles.terminal_user}>{texts.user + ' '}</span>
             <span className={styles.terminal_bling}>{prompt.mark}</span>
             <span className={styles.terminal_cursor}></span>
           </div>
