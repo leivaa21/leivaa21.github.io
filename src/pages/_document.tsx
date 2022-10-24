@@ -13,7 +13,7 @@ class Doc extends Document{
       <Html>
         <Head>
           {/** Meta tags Here! */}
-          <link rel="icon" type="image/png" href="/icons/favicon.png"/>
+          <link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
         </Head>
         <body>
           <Main />

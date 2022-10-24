@@ -60,7 +60,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className={styles.img_wrapper}>
-                <img src="/icons/favicon.png" alt="personal-image"/>          
+                <img src="/images/icons/favicon.png" alt="personal-image"/>          
               </div>
             </div>
           </div>
