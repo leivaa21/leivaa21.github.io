@@ -193,6 +193,10 @@
   background: var(--font-white);
 }
 
+.output a:hover {
+  text-decoration: underline;
+}
+
 
 @-webkit-keyframes curbl {
 
